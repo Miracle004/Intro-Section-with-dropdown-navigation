@@ -1,0 +1,282 @@
+:root {
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --Almost-Black: hsl(0, 0%, 8%);
+  --Font-size: 18px;
+  --light: 500;
+  --strong: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-size: var(--Font-size);
+}
+
+.container {
+  width: fill;
+  background-color: var(--Almost-White);
+}
+
+header {
+  display: grid;
+  margin-bottom: 50px;
+}
+
+.details {
+  display: flex;
+}
+
+.details p:hover {
+  cursor: pointer;
+  font-weight: var(--strong);
+}
+
+.details .dropdown ul li {
+  display: flex;
+  gap: 10px;
+}
+
+.onboarding {
+  display: flex;
+}
+
+.onboarding a {
+  color: var(--Medium-Gray);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.onboarding a:last-child {
+  border: 3px solid var(--Medium-Gray);
+  border-radius: 0.7rem;
+}
+
+main {
+  display: grid;
+  justify-content: center;
+}
+
+aside {
+  display: grid;
+  gap: 70px;
+}
+
+aside .content {
+  display: flex;
+  flex-direction: column;
+}
+
+aside .content h1 {
+  margin: 0;
+}
+
+aside .content p {
+  color: var(--Medium-Gray);
+  font-weight: var(--strong);
+  line-height: 25px;
+}
+
+aside .content button {
+  width: fit-content;
+  font-weight: var(--strong);
+  color: var(--Almost-White);
+  background-color: var(--Almost-Black);
+  border: 2px solid var(--Almost-Black);
+  border-radius: 0.7rem;
+}
+
+aside .sponsors {
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 375px) {
+  header {
+    grid-template-columns: 30% 70%;
+  }
+  header > img:first-child{
+    padding: 20px 0 0 15px;
+  }
+  #menu{
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 20px;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    padding: 60px 0 0 20px;
+    gap: 20px;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+  }
+  .details{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .details .dropdown ul{
+    display: none;
+    list-style: none;
+    margin: 10px  0 0 20px;
+  }
+  .details .dropdown ul li{
+    padding: 5px 0;
+    align-items: center;
+  }
+  .onboarding {
+    width: fit-content;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .onboarding a {
+    text-align: center;
+  }
+  .onboarding a:active {
+    color: var(--Almost-Black);
+  }
+  .onboarding a:last-child {
+    padding: 5px 50px;
+    border: 1px solid var(--Medium-Gray);
+    border-radius: 0.7rem;
+  }
+  .onboarding a:last-child:hover {
+    font-weight: var(--strong);
+    border-color: var(--Almost-Black);
+  }
+  aside{
+    order: 2;
+  }
+  aside .content{
+    width: fit-content;
+    gap: 30px;
+  }
+  aside .content h1{
+    font-size: 1.7rem;
+    margin-top: 20px;
+    text-align: center;
+  }
+  aside .content p{
+    text-align: center;
+  }
+  aside .content button{
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+  aside .sponsors{
+    gap: 10px;
+    justify-content: center;
+  }
+  aside .sponsors img{
+    width: 80px;
+    height: 20px;
+    object-fit: contain;
+  }
+  main > img {
+    width: 375px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container{
+    padding: 40px 50px 0 50px;
+  }
+  header {
+    grid-template-columns: 10% 90%;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+  #menu{
+    display: none;
+  }
+  .details{
+    gap: 60px;
+  }
+
+  .details .dropdown {
+    position: relative;
+  }
+
+  .details .dropdown p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .details .features ul {
+    left: -110px;
+  }
+
+  .details .dropdown ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    list-style: none;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 0.5rem;
+    box-shadow: 3px 4px 20px lightgray;
+  }
+
+  .details .dropdown:hover ul {
+    display: grid;
+  }
+
+  .details .dropdown ul li {
+    padding: 10px 35px;
+  }
+
+  .details .dropdown ul li:hover {
+    background-color: var(--Almost-White);
+    cursor: pointer;
+  }
+  .onboarding{
+    justify-self: right;
+    align-items: center;
+    padding: 4px 20px 0 0;
+    gap: 40px;
+  }
+  .onboarding a:hover {
+    color: var(--Almost-Black);
+  }
+  .onboarding a:last-child {
+    padding: 5px 20px;
+  }
+  .onboarding a:last-child:hover {
+    font-weight: var(--strong);
+    border-color: var(--Almost-Black);
+  }
+  main{
+    grid-template-columns: repeat(2, 570px);
+    gap: 150px;
+  }
+  aside .content{
+    gap: 50px;
+  }
+  aside .content h1{
+    font-size: 5rem;
+  }
+  aside .content button{
+    padding: 12px 25px;
+  }
+  aside .content button:hover {
+    color: var(--Almost-Black);
+    background-color: transparent;
+    cursor: pointer;
+  }
+  aside .sponsors{
+    align-self: end;
+  }
+  main > img {
+    width: 450px;
+    height: 580px;
+  }
+}

@@ -9,26 +9,26 @@ export default function InteractiveDropdown() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const sponsors = {
-        databiz: "src/assets/Images/client-databiz.svg",
-        audioPhile: "src/assets/Images/client-audiophile.svg",
-        meet: "src/assets/Images/client-meet.svg",
-        maker: "src/assets/Images/client-maker.svg"
+        databiz: "public/Images/client-databiz.svg",
+        audioPhile: "public/Images/client-audiophile.svg",
+        meet: "public/Images/client-meet.svg",
+        maker: "public/Images/client-maker.svg"
      }
      const icons = {
-        arrowUp : "src/assets/Images/icon-arrow-up.svg",
-        arrowDown: "src/assets/Images/icon-arrow-down.svg",
-        calender: "src/assets/Images/icon-calendar.svg",
-        closeMenu: "src/assets/Images/icon-close-menu.svg",
-        menu: "src/assets/Images/icon-menu.svg",
-        planning: "src/assets/Images/icon-planning.svg",
-        reminders: "src/assets/Images/icon-reminders.svg",
-        todo: "src/assets/Images/icon-todo.svg",
+        arrowUp : "public/Images/icon-arrow-up.svg",
+        arrowDown: "public/Images/icon-arrow-down.svg",
+        calender: "public/Images/icon-calendar.svg",
+        closeMenu: "public/Images/icon-close-menu.svg",
+        menu: "public/Images/icon-menu.svg",
+        planning: "public/Images/icon-planning.svg",
+        reminders: "public/Images/icon-reminders.svg",
+        todo: "public/Images/icon-todo.svg",
      }
 
      const heroImages = {
-        logo: "src/assets/Images/logo.svg",
-        desktop: "src/assets/Images/image-hero-desktop.png",
-        mobile: "src/assets/Images/image-hero-mobile.png"
+        logo: "public/Images/logo.svg",
+        desktop: "public/Images/image-hero-desktop.png",
+        mobile: "public/Images/image-hero-mobile.png"
      }
 
     const handleDrpdwnClickA = () => {
